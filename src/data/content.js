@@ -36,10 +36,10 @@ export const REPOS = [
 
 export const MOAT = [
   { h:'The proof corpus is time-cumulative.', t:'Every theorem is permanent and additive. Today’s 168 verified theorems are next year’s 400. A follower has to replay the entire history to match a surface we add to every week.' },
-  { h:'Open source is the moat, not the give-away.', t:'The proofs are public because public proofs are the product. The customer pays for the managed runtime, the integration, and the regulatory artifact, not the math.' },
+  { h:'Open source is the moat, not the give-away.', t:'The proofs are public because public proofs are the product. The customer pays for the managed runtime, the integration, and the regulatory artifact.' },
   { h:'The academic anchor is published.', t:'Reflections on Mistrusting Trust plants the flag in the formal-methods literature. The next entrant has to cite us to be taken seriously.' },
   { h:'The proofs are extraction-grade.', t:'Verified codecs compile to production C++ and Haskell. There is no gap between proving it and shipping it.' },
-  { h:'The position is substrate-level.', t:'Once SwitchYard sits underneath an enterprise’s inference path, removing it means re-architecting the compliance story. The switching cost is the audit.' },
+  { h:'The position is substrate-level.', t:'Once SwitchYard sits underneath an enterprise’s inference path, removing it means re-architecting the compliance story.' },
 ];
 
 export const INDUSTRIES = [
