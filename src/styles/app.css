@@ -81,6 +81,11 @@
 .band .h-section{color:#fff;}
 .band .prose p{color:rgba(255,255,255,.8);}
 .band .prose strong{color:#fff;}
+.band .eyebrow{color:rgba(255,255,255,.6);}
+.band .eyebrow--plain{margin-bottom:var(--space-7);}
+.band .moat li{color:rgba(255,255,255,.82);}
+.band .moat strong{color:#fff;}
+.band .moat li::before{color:rgba(255,255,255,.45);}
 
 /* ---------- repo / component tiles ---------- */
 .tiles{display:grid;gap:var(--space-7);grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));}

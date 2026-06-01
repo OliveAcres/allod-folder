@@ -104,18 +104,23 @@ export default function App() {
               </article>
             ))}
           </div>
-          <div className="reading reveal" style={{ marginTop: 'var(--space-10)' }}>
-            <h3 className="h-section" style={{ fontSize: 'var(--t-card)' }}>Why this is a moat, not a tech demo.</h3>
-            <div className="prose">
-              <p>The four skill sets this stack requires, Lean 4 formal methods, Haskell systems
-                engineering, modern C++23, and Nix-grade reproducible infrastructure, almost never
-                co-occur in one engineer, let alone one org chart. A fast follower needs a team that does
-                not exist on the market.</p>
-            </div>
-            <ol className="moat">
-              {MOAT.map(m => <li key={m.h}><strong>{m.h}</strong> {m.t}</li>)}
-            </ol>
+        </div>
+      </section>
+
+      {/* WHY IT HOLDS — defensibility on the instrument panel */}
+      <section className="section band" id="why-it-holds">
+        <div className="container reading reveal">
+          <p className="eyebrow eyebrow--plain"><span>Why it holds</span></p>
+          <h2 className="h-section">Why this compounds, not a tech demo.</h2>
+          <div className="prose">
+            <p>The four skill sets this stack requires, Lean 4 formal methods, Haskell systems
+              engineering, modern C++23, and Nix-grade reproducible infrastructure, almost never
+              co-occur in one engineer, let alone one org chart. A fast follower needs a team that does
+              not exist on the market.</p>
           </div>
+          <ol className="moat">
+            {MOAT.map(m => <li key={m.h}><strong>{m.h}</strong> {m.t}</li>)}
+          </ol>
         </div>
       </section>
 

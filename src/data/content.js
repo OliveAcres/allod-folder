@@ -36,7 +36,7 @@ export const REPOS = [
 
 export const MOAT = [
   { h:'The proof corpus is time-cumulative.', t:'Every theorem is permanent and additive. Today’s 168 verified theorems are next year’s 400. A follower has to replay the entire history to match a surface we add to every week.' },
-  { h:'Open source is the moat, not the give-away.', t:'The proofs are public because public proofs are the product. The customer pays for the managed runtime, the integration, and the regulatory artifact.' },
+  { h:'Open source is the product, not the give-away.', t:'The proofs are public because public proofs are the product. The customer pays for the managed runtime, the integration, and the regulatory artifact.' },
   { h:'The academic anchor is published.', t:'Reflections on Mistrusting Trust plants the flag in the formal-methods literature. The next entrant has to cite us to be taken seriously.' },
   { h:'The proofs are extraction-grade.', t:'Verified codecs compile to production C++ and Haskell. There is no gap between proving it and shipping it.' },
   { h:'The position is substrate-level.', t:'Once SwitchYard sits underneath an enterprise’s inference path, removing it means re-architecting the compliance story.' },
@@ -65,7 +65,7 @@ export const FUND_STATS = [
 export const TRACKS = [
   { n:'01', h:'Productize the substrate into SwitchYard.', t:'Harden the gateway, ship enterprise authentication and tenancy, build the audit-record export tooling compliance teams plug into their GRC stacks, and complete the SOC 2 Type II and FedRAMP Moderate pathway. This is the revenue layer.' },
   { n:'02', h:'Extend the verified surface into the applied verticals.', t:'The controller-safety proof we shipped is the template. Funding replicates it across clinical decision support, financial model governance, and one industrial-controls partnership already in motion. Each vertical is a customer contract paired with an open-source proof artifact.' },
-  { n:'03', h:'Close the remaining substrate gaps and widen the moat.', t:'A dedicated formal-methods team to retire remaining axiomatic assumptions, bring the codegen-to-binary path under proof, and ship the second-generation capability lattice the verticals depend on. Every quarter our proven surface grows and the gap to any fast follower widens.' },
+  { n:'03', h:'Close the remaining substrate gaps and widen the lead.', t:'A dedicated formal-methods team to retire remaining axiomatic assumptions, bring the codegen-to-binary path under proof, and ship the second-generation capability lattice the verticals depend on. Every quarter our proven surface grows and the gap to any fast follower widens.' },
 ];
 
 export const STATUS = [
