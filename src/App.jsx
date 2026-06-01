@@ -4,7 +4,7 @@ import LiquidLensDef from './components/LiquidLensDef';
 import HeroField from './components/HeroField';
 import {
   NAV, HERO_STATS, REPOS, MOAT, INDUSTRIES,
-  FUND_STATS, TRACKS, STATUS, FOUNDERS,
+  FUND_STATS, TRACKS, STATUS, FOUNDERS, SHIPWALL,
 } from './data/content';
 import {
   ArrowUpRight, ArrowRight, CheckCircle2, Lock, ShieldCheck, Hash, Menu,
@@ -226,24 +226,31 @@ export default function App() {
           <div className="reveal">
             <Eyebrow n="07">Why us, why now</Eyebrow>
             <h2 className="h-section">Co-founders who have shipped deep-tech products together before.</h2>
-            <div className="prose">
-              <p>Two of the co-founders have built and shipped products together across three companies
-                before this one. That continuity is the reason the substrate exists. Teams that have already
-                crossed the deep-tech-idea-to-working-product chasm together compound on every subsequent attempt.</p>
-              <p>Around the proof discipline sits Fortune 100 go-to-market range and enterprise
-                product-and-operations leadership, the commercial half of selling evidence to regulated
-                buyers. The team carries Lean 4, Haskell, C++23, and Nix expertise on one org chart. Hiring
-                two of these specialists is hard; hiring all four, working together with this proof
-                discipline, is the moat itself.</p>
-              <p>Every claim on this page maps to a repository, a theorem name, or a published artifact.
-                The work is real, public, and verifiable today. The company that can sell evidence rather
-                than opinions will own this layer, and we are building to be that company.</p>
-            </div>
           </div>
-          <div className="founders">
-            {FOUNDERS.map(f => (
-              <div key={f.b} className="founder reveal">
-                <b>{f.b}</b><span>{f.s}</span><p>{f.p}</p>
+          <div className="founder-grid">
+            {['t1','t2','t3','t4'].map((id, i) => {
+              const f = FOUNDERS.find(x => x.id === id);
+              return (
+                <div key={id} className="founder reveal" style={{ transitionDelay: `${i * 90}ms` }}>
+                  <span className="founder__num">{String(i + 1).padStart(2, '0')}</span>
+                  <img className="founder-name" src={`/logos/${id}.png`} alt="Co-founder" loading="lazy" />
+                  <span className="founder__role">{f.s}</span>
+                  <p>{f.p}</p>
+                </div>
+              );
+            })}
+          </div>
+          <div className="caps reveal">
+            <b>One org chart</b>
+            <code>Lean 4</code><code>Haskell</code><code>C++23</code><code>Nix</code>
+          </div>
+          <div className="shipwall reveal">
+            <p className="shipwall__label">Where the team has shipped</p>
+            {SHIPWALL.map((row, ri) => (
+              <div key={ri} className="shipwall__row">
+                {row.map(l => (
+                  <img key={l.f} className="shiplogo" src={`/logos/${l.f}`} alt={l.a} loading="lazy" />
+                ))}
               </div>
             ))}
           </div>

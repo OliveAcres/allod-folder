@@ -81,8 +81,20 @@ export const STATUS = [
 ];
 
 export const FOUNDERS = [
-  { b:'Ben Reesman', s:'Co-founder', p:'Primary author of Continuity and Reflections on Mistrusting Trust. Architect of the Lean substrate and Nix-fork runtime.' },
-  { b:'Michael Brubeck', s:'Co-founder', p:'3x hyperscale strategy director. 20+ years in M&A, turnaround, and systems engineering across 19+ countries.' },
-  { b:'Justin Breen', s:'Co-founder', p:'Brand and go-to-market lead for Fortune 100 launches (Coca-Cola, AT&T, Warner Bros). Applied AI researcher in diffusion and world models.' },
-  { b:'Jesse Wilson', s:'Co-founder', p:'Director-level product and operations leader across enterprise and startups.' },
+  { id:'t1', s:'Co-founder', p:'Primary author of the formal substrate and its founding paper in the formal-methods literature. Architect of the Lean proof library and the content-addressed build runtime.' },
+  { id:'t2', s:'Co-founder', p:'Brand and go-to-market lead behind Fortune 100 product launches. Applied AI researcher in diffusion and world models.' },
+  { id:'t3', s:'Co-founder', p:'Founding head of product for a category-defining consumer platform, with product leadership across enterprise software and global consumer-security companies. Operates where product, growth, and operations converge.' },
+  { id:'t4', s:'Co-founder', p:'3x hyperscale strategy director. 20+ years in M&A, turnaround, and systems engineering across 19+ countries.' },
+];
+
+export const SHIPWALL = [
+  [
+    { f:'meta.png', a:'Meta' }, { f:'microsoft.png', a:'Microsoft' }, { f:'grindr.png', a:'Grindr' },
+    { f:'avg.png', a:'AVG' }, { f:'avast.png', a:'Avast' }, { f:'huawei.svg', a:'Huawei' },
+    { f:'pfizer.svg', a:'Pfizer' }, { f:'cocacola.png', a:'Coca-Cola' }, { f:'juul.png', a:'JUUL' },
+  ],
+  [
+    { f:'ploom.svg', a:'Ploom' }, { f:'pax.png', a:'PAX' }, { f:'dasani.png', a:'Dasani' },
+    { f:'cinemark.svg', a:'Cinemark' }, { f:'cds.png', a:'Christie' }, { f:'att.svg', a:'AT&T' },
+  ],
 ];

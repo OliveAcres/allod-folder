@@ -134,7 +134,9 @@
 /* ---------- founders ---------- */
 .founders{display:grid;gap:var(--space-7);grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));margin-top:var(--space-8);}
 .founder b{display:block;font:700 18px/1.3 var(--font-sans);color:var(--fg-display);}
-.founder span{display:block;font:400 13px/1 var(--font-sans);text-transform:uppercase;letter-spacing:.08em;color:var(--fg-secondary);margin:7px 0 12px;}
+.founder-name{display:block;width:auto;height:26px;object-fit:contain;margin:0 0 2px;}
+.founder__num{display:block;font:400 22px/1 var(--font-display);color:var(--fg-secondary);margin:0 0 18px;}
+.founder__role{display:block;font:400 13px/1 var(--font-sans);text-transform:uppercase;letter-spacing:.08em;color:var(--fg-secondary);margin:7px 0 14px;}
 .founder p{margin:0;font-size:14.5px;line-height:1.55;color:var(--fg-primary);}
 
 /* ---------- contact / footer ---------- */
@@ -156,3 +158,24 @@
   color:rgba(255,255,255,.55);}
 .console code{font:400 13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;color:rgba(255,255,255,.92);word-break:break-word;}
 @media (max-width:560px){.console__row{grid-template-columns:1fr;gap:4px;}}
+
+/* 07 — instrument-grade 2x2 founder matrix + capability ribbon */
+.founder-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;grid-auto-flow:column;
+  gap:1px;background:var(--line-hairline);border:1px solid var(--line-hairline);margin-top:var(--space-8);}
+.founder{background:var(--bg-canvas);padding:34px;display:flex;flex-direction:column;align-items:flex-start;}
+@media (max-width:720px){.founder-grid{grid-template-columns:1fr;grid-auto-flow:row;grid-template-rows:none;}}
+.caps{display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px;
+  border:1px solid var(--line-hairline);border-top:0;padding:18px 22px;background:var(--bg-canvas);}
+.caps b{font:400 12px/1 var(--font-sans);font-weight:400;text-transform:uppercase;letter-spacing:.1em;color:var(--fg-secondary);margin-right:4px;}
+.caps code{font:500 13px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--fg-display);
+  border:1px solid var(--line-hairline);padding:7px 11px;}
+
+.shipwall{margin-top:var(--space-9);border-top:1px solid var(--line-hairline);padding-top:var(--space-8);}
+.shipwall__label{font:400 var(--t-meta)/1 var(--font-sans);text-transform:uppercase;
+  letter-spacing:.12em;color:var(--fg-secondary);margin:0 0 var(--space-7);}
+.shipwall__row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:30px 44px;}
+.shipwall__row + .shipwall__row{margin-top:40px;}
+.shiplogo{width:auto;height:28px;object-fit:contain;display:block;
+  filter:grayscale(1);opacity:.58;transition:opacity .5s var(--ease-glass);}
+.shiplogo:hover{opacity:.92;}
+@media (max-width:560px){.shiplogo{height:22px;}.shipwall__row{gap:22px 30px;}}
