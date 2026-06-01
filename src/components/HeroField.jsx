@@ -9,21 +9,11 @@ export default function HeroField(){
     const canvas = ref.current;
     const ctx = canvas.getContext('2d');
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let raf, w, h, dpr;
-
-    const resize = ()=>{
-      dpr = Math.min(window.devicePixelRatio || 1, 2);
-      w = canvas.clientWidth; h = canvas.clientHeight;
-      canvas.width = w * dpr; canvas.height = h * dpr;
-      ctx.setTransform(dpr,0,0,dpr,0,0);
-    };
-    resize();
-    window.addEventListener('resize', resize);
+    let raf, w = 0, h = 0, dpr = 1;
 
     const LINES = 26;
-    const draw = (t)=>{
+    const paint = (t)=>{
       ctx.clearRect(0,0,w,h);
-      // faint cool wash so the ground reads instrument-grade, not dead black
       const g = ctx.createRadialGradient(w*0.32,h*0.30,0,w*0.32,h*0.30,Math.max(w,h)*0.95);
       g.addColorStop(0,'rgba(30,36,48,0.42)');
       g.addColorStop(1,'rgba(10,12,16,0)');
@@ -44,12 +34,31 @@ export default function HeroField(){
         ctx.lineWidth = 1;
         ctx.stroke();
       }
-      if(!reduce) raf = requestAnimationFrame(draw);
     };
-    draw(reduce ? 4200 : performance.now());
-    if(reduce) cancelAnimationFrame(raf);
 
-    return ()=>{ cancelAnimationFrame(raf); window.removeEventListener('resize', resize); };
+    const animate = (t)=>{ paint(t); raf = requestAnimationFrame(animate); };
+
+    const resize = ()=>{
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      w = canvas.clientWidth; h = canvas.clientHeight;
+      canvas.width = Math.round(w * dpr);
+      canvas.height = Math.round(h * dpr);
+      ctx.setTransform(dpr,0,0,dpr,0,0);
+      paint(reduce ? 4200 : performance.now());
+    };
+
+    resize();
+    window.addEventListener('resize', resize);
+    const ro = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(resize) : null;
+    ro && ro.observe(canvas);
+
+    if(!reduce) raf = requestAnimationFrame(animate);
+
+    return ()=>{
+      cancelAnimationFrame(raf);
+      window.removeEventListener('resize', resize);
+      ro && ro.disconnect();
+    };
   },[]);
   return <canvas ref={ref} className="hero__field" />;
 }
