@@ -45,14 +45,7 @@ export default function App() {
         <HeroField />
         <div className="container hero__inner">
           <Eyebrow n="Series A">Deep-tech / Formal Methods</Eyebrow>
-          <h1>The deterministic proof layer that <em>unlocks regulated AI spend.</em></h1>
-          <p className="hero__sub">
-            Hundreds of billions in enterprise AI budget sit trapped in pilots across healthcare,
-            finance, defense, and critical infrastructure. Not for want of intelligence, for want of
-            evidence. We build the missing artifact: <strong>cryptographic, mathematically verified
-            proof</strong> that every action an AI system took was authorized, in-bounds, and
-            reproducible. The only evidence a CISO, a compliance officer, or a federal program manager can sign.
-          </p>
+          <h1>Deterministic proof unlocks regulated AI spend <em>that probabilistic output can&rsquo;t.</em></h1>
           <div className="hero__actions">
             <a className="btn-primary" href="#contact">Request the data room <ArrowRight size={17} strokeWidth={1.6} /></a>
             <a className="btn-ghost" href="https://github.com/sensenet-ai" target="_blank" rel="noreferrer">
