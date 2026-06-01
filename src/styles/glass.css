@@ -1,0 +1,45 @@
+/* Liquid Glass — chrome only, never content. Refracts the field beneath it. */
+.glass{
+  position:relative;
+  background:var(--glass-tint-light);
+  -webkit-backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-saturate));
+          backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  border:1px solid rgba(255,255,255,.22);
+  border-radius:var(--glass-radius);
+  box-shadow:var(--glass-inner-shadow),var(--glass-drop);
+  isolation:isolate;
+}
+.glass::before{
+  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(135deg,var(--glass-rim) 0%,transparent 28%,transparent 72%,rgba(255,255,255,.25) 100%);
+  mix-blend-mode:screen;opacity:.7;
+  filter:url(#liquid-lens);   /* lensing on the rim only — keeps base backdrop-filter intact */
+}
+.glass--dark{background:var(--glass-tint);border-color:rgba(255,255,255,.12);}
+
+/* Materialize on enter: blur develops 0 -> 18, never pops */
+.glass.is-enter{
+  -webkit-backdrop-filter:blur(0) saturate(1);
+          backdrop-filter:blur(0) saturate(1);
+  opacity:0;
+}
+.glass.is-in{
+  -webkit-backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-saturate));
+          backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  opacity:1;
+  transition:backdrop-filter var(--dur-slow) var(--ease-glass),
+             -webkit-backdrop-filter var(--dur-slow) var(--ease-glass),
+             opacity var(--dur-slow) var(--ease-glass);
+}
+
+/* Graceful degradation where backdrop-filter is unsupported */
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .glass{background:rgba(14,17,22,.82);filter:none;}
+  .glass--dark{background:rgba(14,17,22,.9);}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto !important;}
+  .glass.is-enter{opacity:1;-webkit-backdrop-filter:blur(var(--glass-blur));backdrop-filter:blur(var(--glass-blur));}
+  .fade-in,.reveal{animation:none !important;opacity:1 !important;transform:none !important;}
+}

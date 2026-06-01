@@ -1,0 +1,56 @@
+:root{
+  /* --- Fuseproject bones: achromatic slate (verified) --- */
+  --fg-primary:#323746;
+  --fg-display:#000000;
+  --fg-secondary:#707070;
+  --bg-canvas:#FFFFFF;
+  --bg-soft:#F1F3F7;
+  --bg-inverse:#0E1116;        /* allod-brand deepening: instrument-panel hero ground */
+  --line-hairline:#E6E6E3;
+  --line-strong:#323746;
+  --alert-red:#FB0909;         /* rare, not a brand color */
+
+  /* Optional signal hue — allod-brand DECISION PENDING, default OFF.
+     Shipping achromatic until Brubes locks a hex. */
+  /* --signal-verified:#3C8C6E; */
+
+  /* --- Type: F37 Lineca (commercial) with Jost substitute, self-hosted --- */
+  --font-display:"F37 Lineca10 Semi Light","Jost",ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --font-sans:"F37 Lineca","Jost",ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif;
+
+  /* Ramp 16 -> 32 -> 48 (1:2:3); display weight 400, never bold */
+  --t-body:clamp(16px,1.05vw,18px);
+  --t-meta:14px;
+  --t-card:clamp(22px,2.4vw,32px);
+  --t-section:clamp(25px,3.6vw,48px);
+  --t-hero:clamp(34px,6vw,76px);
+
+  /* --- Layout --- */
+  --container-max:1680px;
+  --reading-max:1080px;
+  --gutter:clamp(24px,4vw,64px);
+  --section-y:clamp(64px,9vw,150px);
+  --space-6:32px; --space-7:48px; --space-8:64px; --space-9:96px; --space-10:128px;
+  --radius:0;                  /* content frames are sharp */
+
+  /* --- Motion: expo-out, 0.5-1s, snap nowhere --- */
+  --ease-glass:cubic-bezier(0.16,1,0.3,1);
+  --dur-fast:.5s; --dur-base:.7s; --dur-slow:1s;
+
+  /* --- Liquid Glass tokens --- */
+  --glass-tint:rgba(50,55,70,.28);
+  --glass-tint-light:rgba(255,255,255,.16);
+  --glass-blur:18px; --glass-saturate:1.6;
+  --glass-rim:rgba(255,255,255,.55);
+  --glass-inner-shadow:inset 0 1px 0 rgba(255,255,255,.45),inset 0 -1px 2px rgba(0,0,0,.18);
+  --glass-drop:0 8px 30px -12px rgba(10,10,14,.45);
+  --glass-radius:22px;         /* concentric corners — deliberately NOT 0 */
+}
+
+*{box-sizing:border-box;}
+html{scroll-snap-type:none;-webkit-text-size-adjust:100%;}
+html,body{margin:0;padding:0;background:var(--bg-canvas);color:var(--fg-primary);}
+body{font:400 var(--t-body)/1.6 var(--font-sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+img{width:100%;height:100%;object-fit:cover;display:block;}
+a{color:inherit;text-decoration:none;}
+::selection{background:var(--fg-primary);color:#fff;}
