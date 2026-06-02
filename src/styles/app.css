@@ -178,9 +178,10 @@
 .shipwall{margin-top:var(--space-9);border-top:1px solid var(--line-hairline);padding-top:var(--space-8);}
 .shipwall__label{font:400 var(--t-meta)/1 var(--font-sans);text-transform:uppercase;
   letter-spacing:.12em;color:var(--fg-secondary);margin:0 0 var(--space-7);}
-.shipwall__row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:30px 44px;}
+.shipwall__row{display:grid;grid-template-columns:repeat(5,1fr);align-items:center;justify-items:center;gap:38px 24px;}
 .shipwall__row + .shipwall__row{margin-top:40px;}
-.shiplogo{width:auto;height:28px;object-fit:contain;display:block;
+.shiplogo{width:auto;height:30px;object-fit:contain;display:block;
   filter:grayscale(1);opacity:.58;transition:opacity .5s var(--ease-glass);}
 .shiplogo:hover{opacity:.92;}
-@media (max-width:560px){.shiplogo{height:22px;}.shipwall__row{gap:22px 30px;}}
+@media (max-width:720px){.shipwall__row{grid-template-columns:repeat(3,1fr);gap:30px 18px;}}
+@media (max-width:480px){.shipwall__row{grid-template-columns:repeat(2,1fr);}.shiplogo{height:24px;}}

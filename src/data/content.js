@@ -89,12 +89,11 @@ export const FOUNDERS = [
 
 export const SHIPWALL = [
   [
-    { f:'meta.png', a:'Meta' }, { f:'microsoft.png', a:'Microsoft' }, { f:'grindr.png', a:'Grindr' },
-    { f:'avg.png', a:'AVG' }, { f:'avast.png', a:'Avast' }, { f:'huawei.svg', a:'Huawei' },
-    { f:'pfizer.svg', a:'Pfizer' }, { f:'cocacola.png', a:'Coca-Cola' }, { f:'juul.png', a:'JUUL' },
+    { f:'meta.png', a:'Meta' }, { f:'microsoft.png', a:'Microsoft' }, { f:'avast.png', a:'Avast' },
+    { f:'avg.png', a:'AVG' }, { f:'huawei.svg', a:'Huawei' },
   ],
   [
-    { f:'ploom.svg', a:'Ploom' }, { f:'pax.png', a:'PAX' }, { f:'dasani.png', a:'Dasani' },
-    { f:'cinemark.svg', a:'Cinemark' }, { f:'cds.png', a:'Christie' }, { f:'att.svg', a:'AT&T' },
+    { f:'att.svg', a:'AT&T' }, { f:'grindr.png', a:'Grindr' }, { f:'pfizer.svg', a:'Pfizer' },
+    { f:'cocacola.png', a:'Coca-Cola' }, { f:'juul.png', a:'JUUL' },
   ],
 ];
