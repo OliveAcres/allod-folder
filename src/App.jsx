@@ -48,7 +48,7 @@ export default function App() {
           <h1>Deterministic proof unlocks regulated AI spend <em>that probabilistic output can&rsquo;t.</em></h1>
           <div className="hero__actions">
             <a className="btn-primary" href="#contact">Request the data room <ArrowRight size={17} strokeWidth={1.6} /></a>
-            <a className="btn-ghost" href="https://github.com/sensenet-ai" target="_blank" rel="noreferrer">
+            <a className="btn-ghost" href="#substrate">
               Browse the substrate <ArrowUpRight size={17} strokeWidth={1.5} />
             </a>
           </div>
@@ -91,7 +91,7 @@ export default function App() {
           <div className="reading reveal">
             <Eyebrow n="02">What we&rsquo;ve built</Eyebrow>
             <h2 className="h-section">A formally-verified action substrate, in production code, open for inspection today.</h2>
-            <p className="lede">Roughly 120 repositories at github.com/sensenet-ai span formal proofs,
+            <p className="lede">Roughly 40 repositories span formal proofs,
               build infrastructure, codecs, runtime, and inference. The load-bearing components:</p>
           </div>
           <div className="tiles" style={{ marginTop: 'var(--space-9)' }}>
@@ -167,9 +167,9 @@ export default function App() {
             <div className="console__row"><span className="console__k">request</span>
               <code>base_url = &quot;https://api.allodial.io/v1&quot;</code></div>
             <div className="console__row"><span className="console__k">grade</span>
-              <code>capability: clinical.read · discharged at action site</code></div>
+              <code>permission: clinical.read · checked at point of use</code></div>
             <div className="console__row"><span className="console__k">record</span>
-              <code>blake3:9f2c… · sig: Ed25519+ML-DSA-65 · replayable</code></div>
+              <code>record: signed · tamper-evident · replayable</code></div>
           </div>
         </div>
       </section>
@@ -267,8 +267,8 @@ export default function App() {
         <div className="container reading reveal">
           <Eyebrow n="08">Open a conversation</Eyebrow>
           <h2 className="h-section">A technical due-diligence packet is available on request.</h2>
-          <p>The packet includes the published <em>Reflections on Mistrusting Trust</em> paper, the public
-            repository index at github.com/sensenet-ai, and an under-NDA architecture overview of the
+          <p>The packet includes the published <em>Reflections on Mistrusting Trust</em> paper, a curated
+            repository index shared on request, and an under-NDA architecture overview of the
             SwitchYard product surface.</p>
           <a className="btn-primary" href="mailto:partners@allodial.io">
             Request the data room <ArrowRight size={17} strokeWidth={1.6} />
@@ -278,7 +278,7 @@ export default function App() {
           <div className="foot">
             <span>© Allodial, Inc., a Delaware corporation</span>
             <span>
-              <a className="link-inline" href="https://github.com/sensenet-ai" target="_blank" rel="noreferrer">github.com/sensenet-ai</a>
+              <a className="link-inline" href="mailto:partners@allodial.io">partners@allodial.io</a>
               {'  ·  rev 2026.06 · pre-A'}
             </span>
           </div>

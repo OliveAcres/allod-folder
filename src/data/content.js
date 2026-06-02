@@ -8,22 +8,22 @@ export const NAV = [
 
 export const HERO_STATS = [
   { b:'168', s:'verified theorems, zero unproved' },
-  { b:'120+', s:'open repositories' },
+  { b:'40+', s:'open repositories' },
   { b:'Lean 4 · Haskell · C++23 · Nix', s:'stack' },
   { b:'San Juan, PR', s:'headquarters' },
 ];
 
 export const REPOS = [
-  { slug:'sensenet-ai / continuity', name:'Continuity: the action substrate',
+  { slug:'continuity', name:'Continuity: the action substrate',
     body:'A Lean 4 library defining content-addressed derivations, BLAKE3 hashing, a 13-label graded-monad capability lattice, and the composed correctness theorem that ties the substrate together. Documented in our paper Reflections on Mistrusting Trust.',
     meta:['86 theorems','0 unproved','Lean 4.30'] },
-  { slug:'sensenet-ai / cornell', name:'Cornell: verified codec library',
+  { slug:'cornell', name:'Cornell: verified codec library',
     body:'Bidirectional verified codecs for SIGIL, ZMTP, the Nix daemon protocol, Protobuf, HTTP/2, HTTP/3, and Git pack formats, with proof-carrying extraction to C++ and Haskell. Every input that crosses a trust boundary crosses a verified codec.',
     meta:['82 theorems','0 unproved','C++ · Haskell'] },
-  { slug:'sensenet-ai / switchyard', name:'SwitchYard: the proof-carrying LLM gateway',
+  { slug:'switchyard', name:'SwitchYard: the proof-carrying LLM gateway',
     body:'An OpenAI-compatible drop-in gateway. Every request carries a typed capability grade discharged at the action site. Every response carries a signed, content-addressed record: a tamper-evident, replayable, machine-checkable evidence chain per inference.',
-    meta:['Ed25519 + ML-DSA-65','SLH-DSA-128s','BLAKE3'] },
-  { slug:'sensenet-ai / nix (fork)', name:'Content-addressed build infrastructure',
+    meta:['Signed records','Quantum-resistant','Tamper-evident'] },
+  { slug:'nix (fork)', name:'Content-addressed build infrastructure',
     body:'A daemonless rewrite of Nix in C++23 with BLAKE3 checksums, io_uring-native I/O, and Firecracker-microVM build isolation. The system enforces reproducibility at every layer below the application.',
     meta:['C++23 daemonless','io_uring','Firecracker'] },
   { slug:'internal / ai-safety corpus', name:'Formal AI safety corpus',
@@ -69,14 +69,14 @@ export const TRACKS = [
 ];
 
 export const STATUS = [
-  ['Content-addressed action chain (BLAKE3 + CAS)','Shipped','In production across the substrate. Public.'],
-  ['Verified codec library for trust-boundary inputs','Shipped','82 theorems, zero unproved. C++ and Haskell extraction.'],
-  ['Capability-bound LLM gateway with discharge proofs','Shipped','Ed25519 runtime verification path integrated end-to-end.'],
-  ['Hybrid post-quantum signature substrate','Shipped','Ed25519 + ML-DSA-65 + SLH-DSA-128s. In the published paper.'],
-  ['Formal AI safety corpus (consent, exit, anti-coercion)','Shipped','~7,000 lines of Lean. Substrate-bridged.'],
-  ['Industrial setpoint controller (∀-scenario safety)','Shipped','One finished applied vertical. Template for the next five.'],
-  ['Multi-vertical action-obligation completeness (L4)','Next','Funded by Track 2. Partial records unconstructible at compile time.'],
-  ['Codegen-to-binary path under proof','Next','Funded by Track 3. Closes the last unproven gap in extraction.'],
+  ['Tamper-evident record of every action','Shipped','Live in production. Publicly inspectable.'],
+  ['Mathematically verified handling of every external input','Shipped','82 proofs, none assumed. Runs as production code.'],
+  ['Permission-checked AI gateway','Shipped','Every request is cryptographically signed and checked as it runs.'],
+  ['Signatures that hold up against future quantum computers','Shipped','Quantum-resistant by design. Documented in the published paper.'],
+  ['Proven AI-safety guarantees: consent, the right to exit, no coercion','Shipped','~7,000 lines of machine-checked proof.'],
+  ['Industrial safety controller proven for every scenario','Shipped','One finished real-world deployment. Template for the next five.'],
+  ['Proof that every required action is accounted for, across industries','Next','Funded by Track 2. Incomplete records become impossible to create.'],
+  ['Proof carried all the way down to the shipped software','Next','Funded by Track 3. Closes the last remaining gap.'],
   ['FedRAMP Moderate · SOC 2 Type II','Next','Funded by Track 1. Required for federal and large-enterprise procurement.'],
 ];
 
